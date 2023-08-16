@@ -25,7 +25,7 @@ class OcrView(View):
             text_correction = text_correction.correct()
             text_correction = str(text_correction)
         
-        return JsonResponse({'text': text_correction})
+        return JsonResponse({'text': text})
 
     def put(self, request):
         pass
