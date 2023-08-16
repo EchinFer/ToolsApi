@@ -5,6 +5,8 @@ from PIL import Image
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 
+from textblob import TextBlob
+
 # Create your views here.
 
 class OcrView(View):
@@ -19,8 +21,9 @@ class OcrView(View):
             
             # Realiza OCR en la imagen usando Tesseract a través de pytesseract
             text = pytesseract.image_to_string(img)
+            text_correction = TextBlob(text)
         
-        return JsonResponse({'text': text})
+        return JsonResponse({'text': text_correction})
 
     def put(self, request):
         pass
