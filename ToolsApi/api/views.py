@@ -12,6 +12,7 @@ class OcrView(View):
     
     def post(self, request):
         text = ''
+        text_correction = ''
         if request.method == 'POST' and request.FILES.get('image'):
             image = request.FILES['image']
         
