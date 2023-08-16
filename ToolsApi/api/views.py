@@ -23,6 +23,7 @@ class OcrView(View):
             text = pytesseract.image_to_string(img)
             text_correction = TextBlob(text)
             text_correction = text_correction.correct()
+            text_correction = str(text_correction)
         
         return JsonResponse({'text': text_correction})
 
