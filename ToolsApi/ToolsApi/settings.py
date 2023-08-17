@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'api',
     'corsheaders',
-    'textblob'
+    'textblob',
+    'cv2',
+    'language_tool_python' 
 ]
 
 MIDDLEWARE = [
