@@ -2,3 +2,5 @@ django
 django-cors-headers
 pytesseract
 textblob
+language-tool-python
+opencv-python
